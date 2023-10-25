@@ -1,0 +1,58 @@
+#include <iostream>
+
+int main() 
+{
+    cout << "Task1" << endl;
+    // Input a three-digit number
+    int number;
+    std::cout << "Enter a three-digit number: ";
+    std::cin >> number;
+
+    // Extract the rightmost digit
+    int rightmostDigit = number % 10;
+
+    // Remove the rightmost digit
+    int numberWithoutRightmostDigit = number / 10;
+
+    // Shift the rightmost digit to the left
+    int result = rightmostDigit * 100 + numberWithoutRightmostDigit;
+
+    // Display the result
+    std::cout << "The result is: " << result << std::endl;
+
+
+    cout << "Task2" << endl;
+    // Input the coordinat es
+    double x, y;
+    std::cout << "Enter the coordinates (x, y): ";
+    std::cin >> x >> y;
+
+    // Check if the point is in the fourth quadrant
+    if (x > 0 && y < 0) 
+    {
+        std::cout << "The point is in the fourth quadrant." << std::endl;
+    } 
+    else
+    {
+        std::cout << "The point is not in the fourth quadrant." << std::endl;
+    }
+
+    return 0;
+
+    
+    cout << "Task3" << endl;
+    #include <cmath>
+    // Input value for x
+    double x;
+    std::cout << "Enter the value of x: ";
+    std::cin >> x;
+
+    // Calculate the expression
+    double result = pow(abs(2 * pow(x, 2) - fabs(sin(x)) * tan(x) * pow(2.5, cos(x))), 1.0 / 5.0) /
+                    (0.625 + 2 * log2(x + 7.5));
+
+    // Display the result
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;
+}
